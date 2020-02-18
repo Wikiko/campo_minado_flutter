@@ -69,16 +69,18 @@ class _CampoMinadoAppState extends State<CampoMinadoApp> {
           venceu: _venceu,
           onReiniciar: _reinciar,
         ),
-        body: Container(child: LayoutBuilder(
-          builder: (ctx, constraints) {
-            return TabuleiroWidget(
-              tabuleiro:
-                  _getTabuleiro(constraints.maxWidth, constraints.maxHeight),
-              onAbrir: _abrir,
-              onAlternarMarcacao: _alternarMarcacao,
-            );
-          },
-        )),
+        body: Container(
+            color: Colors.grey,
+            child: LayoutBuilder(
+              builder: (ctx, constraints) {
+                return TabuleiroWidget(
+                  tabuleiro: _getTabuleiro(
+                      constraints.maxWidth, constraints.maxHeight),
+                  onAbrir: _abrir,
+                  onAlternarMarcacao: _alternarMarcacao,
+                );
+              },
+            )),
       ),
     );
   }
